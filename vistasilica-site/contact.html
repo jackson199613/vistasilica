@@ -110,9 +110,12 @@
       <div>
         <span class="eyebrow">Inquiry form</span>
         <h2 class="section-title" style="margin-bottom:1.5rem">Tell us about your project</h2>
-        <form name="inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you.html">
-          <input type="hidden" name="form-name" value="inquiry">
-          <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="070878b7-643d-4cbe-aaab-2ebabbda39b0">
+          <input type="hidden" name="subject" value="New inquiry from Vistasilica website">
+          <input type="hidden" name="from_name" value="Vistasilica Website">
+          <input type="hidden" name="redirect" value="https://vistasilica.netlify.app/thank-you.html">
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none">
           <div class="form-grid">
             <div class="field"><label>Name <span class="req">*</span></label><input type="text" name="name" required></div>
             <div class="field"><label>Work email <span class="req">*</span></label><input type="email" name="email" required></div>
