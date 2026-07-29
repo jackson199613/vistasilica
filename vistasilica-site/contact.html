@@ -17,14 +17,6 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"Vistasilica","email":"sales@vistasilica.com","contactPoint":[{"@type":"ContactPoint","contactType":"sales","email":"sales@vistasilica.com","availableLanguage":["en"]}]}
 </script>
-<!-- Google Analytics (GA4) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1TE83L268C"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-1TE83L268C');
-</script>
 </head>
 <body><header class="site-header" id="top">
   <div class="topbar">
@@ -78,9 +70,9 @@
             <svg class="caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 4l4 4 4-4"/></svg>
           </a>
           <div class="mega mega--single">
-            <a class="mega__item" href="resources/selector.html"><span class="mega__num">◈</span><span class="mega__body"><strong>Product Selector</strong><span>Application × system × recommended grade</span></span></a><a class="mega__item" href="resources/specifications.html"><span class="mega__num">▧</span><span class="mega__body"><strong>Grade Specifications</strong><span>TDS: properties, compliance, packaging</span></span></a>
+            <a class="mega__item" href="resources/selector.html"><span class="mega__num">◈</span><span class="mega__body"><strong>Product Selector</strong><span>Application × system × recommended grade</span></span></a>
             <a class="mega__item" href="resources/downloads.html"><span class="mega__num">▤</span><span class="mega__body"><strong>Download Center</strong><span>SDS / TDS / COA / spec sheets</span></span></a>
-            <a class="mega__item" href="resources/quality.html"><span class="mega__num">✓</span><span class="mega__body"><strong>Quality &amp; Delivery</strong><span>QC process · packaging · logistics</span></span></a>
+            <a class="mega__item" href="manufacturing.html"><span class="mega__num">⚙</span><span class="mega__body"><strong>Manufacturing Process</strong><span>Six-stage controlled production · batch QC</span></span></a><a class="mega__item" href="resources/quality.html"><span class="mega__num">✓</span><span class="mega__body"><strong>Quality &amp; Delivery</strong><span>QC process · packaging · logistics</span></span></a>
             <a class="mega__item" href="resources/knowledge.html"><span class="mega__num">✎</span><span class="mega__body"><strong>Whitepapers &amp; FAQ</strong><span>Application articles and common questions</span></span></a>
           </div>
         </li>
@@ -118,25 +110,21 @@
       <div>
         <span class="eyebrow">Inquiry form</span>
         <h2 class="section-title" style="margin-bottom:1.5rem">Tell us about your project</h2>
-        <form action="https://api.web3forms.com/submit" method="POST">
-          <input type="hidden" name="access_key" value="070878b7-643d-4cbe-aaab-2ebabbda39b0">
-          <input type="hidden" name="subject" value="New inquiry from Vistasilica website">
-          <input type="hidden" name="from_name" value="Vistasilica Website">
-          <input type="hidden" name="redirect" value="https://vistasilica.netlify.app/thank-you.html">
-          <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+        <form data-demo>
           <div class="form-grid">
-            <div class="field"><label>Name <span class="req">*</span></label><input type="text" name="name" required></div>
-            <div class="field"><label>Work email <span class="req">*</span></label><input type="email" name="email" required></div>
-            <div class="field"><label>Company <span class="req">*</span></label><input type="text" name="company" required></div>
-            <div class="field"><label>Country / region <span class="req">*</span></label><input type="text" name="country" required></div>
-            <div class="field"><label>WhatsApp / phone</label><input type="tel" name="phone" placeholder="+.."></div>
+            <div class="field"><label>Name <span class="req">*</span></label><input type="text" required></div>
+            <div class="field"><label>Work email <span class="req">*</span></label><input type="email" required></div>
+            <div class="field"><label>Company <span class="req">*</span></label><input type="text" required></div>
+            <div class="field"><label>Country / region <span class="req">*</span></label><input type="text" required></div>
+            <div class="field"><label>WhatsApp / phone</label><input type="tel" placeholder="+.."></div>
             <div class="field"><label>Target track</label>
-              <select name="track"><option>Feed additives</option><option>Food powders</option><option>Oral care</option><option>Agrochemical</option><option>Oil refining</option><option>Personal care</option><option>Other / not sure</option></select>
+              <select><option>Feed additives</option><option>Food powders</option><option>Oral care</option><option>Agrochemical</option><option>Oil refining</option><option>Personal care</option><option>Other / not sure</option></select>
             </div>
-            <div class="field field--full"><label>Your requirement <span class="req">*</span></label><textarea name="requirement" required placeholder="Process system, target metrics, current pain points, destination port / MOQ…"></textarea></div>
+            <div class="field field--full"><label>Your requirement <span class="req">*</span></label><textarea required placeholder="Process system, target metrics, current pain points, destination port / MOQ…"></textarea></div>
           </div>
-          <label class="checkbox" style="margin:1rem 0"><input type="checkbox" name="gdpr-consent" required> I agree that Vistasilica may process the information I submit under the <a href="legal/privacy.html" style="color:var(--teal)">Privacy Policy</a> to respond to this inquiry (GDPR).</label>
+          <label class="checkbox" style="margin:1rem 0"><input type="checkbox" required> I agree that Vistasilica may process the information I submit under the <a href="legal/privacy.html" style="color:var(--teal)">Privacy Policy</a> to respond to this inquiry (GDPR).</label>
           <button class="btn btn--primary" type="submit">Submit inquiry</button>
+          <p class="form-result" hidden style="margin-top:1rem;color:var(--teal);font-size:.9rem">✓ We've received your inquiry and will contact you shortly (demo site).</p>
         </form>
       </div>
       <aside>
@@ -186,6 +174,7 @@
         <ul>
           <li><a href="resources/selector.html">Product Selector</a></li>
           <li><a href="resources/downloads.html">Download Center</a></li>
+          <li><a href="manufacturing.html">Manufacturing Process</a></li>
           <li><a href="resources/quality.html">Quality &amp; Delivery</a></li>
           <li><a href="resources/knowledge.html">Whitepapers &amp; FAQ</a></li>
           <li><a href="resources/sample.html">Request a Sample</a></li>
@@ -221,7 +210,7 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
   </button>
 </div>
-<script src="js/main.js" defer></script>
-<script src="js/apple-motion.js" defer></script>
+<script src="js/main.js"></script>
+<script src="js/apple-motion.js"></script>
 </body>
 </html>

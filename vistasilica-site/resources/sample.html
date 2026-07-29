@@ -15,14 +15,6 @@
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/apple-refine.css">
 
-<!-- Google Analytics (GA4) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1TE83L268C"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-1TE83L268C');
-</script>
 </head>
 <body><header class="site-header" id="top">
   <div class="topbar">
@@ -76,9 +68,9 @@
             <svg class="caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 4l4 4 4-4"/></svg>
           </a>
           <div class="mega mega--single">
-            <a class="mega__item" href="../resources/selector.html"><span class="mega__num">◈</span><span class="mega__body"><strong>Product Selector</strong><span>Application × system × recommended grade</span></span></a><a class="mega__item" href="../resources/specifications.html"><span class="mega__num">▧</span><span class="mega__body"><strong>Grade Specifications</strong><span>TDS: properties, compliance, packaging</span></span></a>
+            <a class="mega__item" href="../resources/selector.html"><span class="mega__num">◈</span><span class="mega__body"><strong>Product Selector</strong><span>Application × system × recommended grade</span></span></a>
             <a class="mega__item" href="../resources/downloads.html"><span class="mega__num">▤</span><span class="mega__body"><strong>Download Center</strong><span>SDS / TDS / COA / spec sheets</span></span></a>
-            <a class="mega__item" href="../resources/quality.html"><span class="mega__num">✓</span><span class="mega__body"><strong>Quality &amp; Delivery</strong><span>QC process · packaging · logistics</span></span></a>
+            <a class="mega__item" href="../manufacturing.html"><span class="mega__num">⚙</span><span class="mega__body"><strong>Manufacturing Process</strong><span>Six-stage controlled production · batch QC</span></span></a><a class="mega__item" href="../resources/quality.html"><span class="mega__num">✓</span><span class="mega__body"><strong>Quality &amp; Delivery</strong><span>QC process · packaging · logistics</span></span></a>
             <a class="mega__item" href="../resources/knowledge.html"><span class="mega__num">✎</span><span class="mega__body"><strong>Whitepapers &amp; FAQ</strong><span>Application articles and common questions</span></span></a>
           </div>
         </li>
@@ -130,24 +122,20 @@
       <aside>
         <div class="sidecard" style="position:static">
           <h3>Sample request form</h3>
-          <form action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="070878b7-643d-4cbe-aaab-2ebabbda39b0">
-            <input type="hidden" name="subject" value="New sample request from Vistasilica website">
-            <input type="hidden" name="from_name" value="Vistasilica Website">
-            <input type="hidden" name="redirect" value="https://vistasilica.netlify.app/thank-you.html">
-            <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+          <form data-demo>
             <div class="form-grid">
-              <div class="field"><label>Name <span class="req">*</span></label><input type="text" name="name" required></div>
-              <div class="field"><label>Work email <span class="req">*</span></label><input type="email" name="email" required></div>
-              <div class="field"><label>Company <span class="req">*</span></label><input type="text" name="company" required></div>
-              <div class="field"><label>Country / region <span class="req">*</span></label><input type="text" name="country" required></div>
+              <div class="field"><label>Name <span class="req">*</span></label><input type="text" required></div>
+              <div class="field"><label>Work email <span class="req">*</span></label><input type="email" required></div>
+              <div class="field"><label>Company <span class="req">*</span></label><input type="text" required></div>
+              <div class="field"><label>Country / region <span class="req">*</span></label><input type="text" required></div>
               <div class="field field--full"><label>Target track <span class="req">*</span></label>
-                <select name="track" required><option value="">Please select</option><option>Feed additives</option><option>Food powders</option><option>Oral care</option><option>Agrochemical</option><option>Oil refining</option><option>Personal care</option></select>
+                <select required><option value="">Please select</option><option>Feed additives</option><option>Food powders</option><option>Oral care</option><option>Agrochemical</option><option>Oil refining</option><option>Personal care</option></select>
               </div>
-              <div class="field field--full"><label>Process / application and target metrics</label><textarea name="requirement" placeholder="e.g. premix liquid-additive powdering, target liquid load 40%, current caking in storage…"></textarea></div>
+              <div class="field field--full"><label>Process / application and target metrics</label><textarea placeholder="e.g. premix liquid-additive powdering, target liquid load 40%, current caking in storage…"></textarea></div>
             </div>
-            <label class="checkbox" style="margin:1rem 0"><input type="checkbox" name="gdpr-consent" required> I agree that Vistasilica may process my information under the <a href="../legal/privacy.html" style="color:var(--teal)">Privacy Policy</a> (GDPR).</label>
+            <label class="checkbox" style="margin:1rem 0"><input type="checkbox" required> I agree that Vistasilica may process my information under the <a href="../legal/privacy.html" style="color:var(--teal)">Privacy Policy</a> (GDPR).</label>
             <button class="btn btn--primary" style="width:100%;justify-content:center" type="submit">Submit sample request</button>
+            <p class="form-result" hidden style="margin-top:1rem;color:var(--teal);font-size:.88rem">✓ We've received your request and will contact you within 72 hours (demo site).</p>
           </form>
         </div>
       </aside>
@@ -173,6 +161,7 @@
         <ul>
           <li><a href="../resources/selector.html">Product Selector</a></li>
           <li><a href="../resources/downloads.html">Download Center</a></li>
+          <li><a href="../manufacturing.html">Manufacturing Process</a></li>
           <li><a href="../resources/quality.html">Quality &amp; Delivery</a></li>
           <li><a href="../resources/knowledge.html">Whitepapers &amp; FAQ</a></li>
           <li><a href="../resources/sample.html">Request a Sample</a></li>
@@ -208,7 +197,7 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
   </button>
 </div>
-<script src="../js/main.js" defer></script>
-<script src="../js/apple-motion.js" defer></script>
+<script src="../js/main.js"></script>
+<script src="../js/apple-motion.js"></script>
 </body>
 </html>

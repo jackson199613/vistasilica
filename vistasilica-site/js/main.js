@@ -52,6 +52,21 @@
     });
   }
 
+  // ---- Form demo submit (no backend on static host) ----
+  document.querySelectorAll("form[data-demo]").forEach(function (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var ok = form.querySelector('input[type="checkbox"][required]');
+      if (ok && !ok.checked) { ok.focus(); return; }
+      var note = form.querySelector(".form-result");
+      if (note) {
+        note.hidden = false;
+        note.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+      form.reset();
+    });
+  });
+
   // ---- Scroll reveal ----
   if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     var io = new IntersectionObserver(function (entries) {
