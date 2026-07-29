@@ -39,6 +39,14 @@
   .proc-stats b { font-family: var(--font-display); font-size: 1.9rem; color: var(--sand); display: block; }
   .proc-stats span { color: #a9bcb8; font-size: .85rem; }
 </style>
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1TE83L268C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1TE83L268C');
+</script>
 </head>
 <body><header class="site-header" id="top">
   <div class="topbar">
@@ -62,7 +70,7 @@
         </span>
       </a>
       <ul class="nav__links">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" aria-current="page">Home</a></li>
         <li class="has-mega">
           <a href="solutions/index.html">Solutions
             <svg class="caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 4l4 4 4-4"/></svg>
@@ -88,13 +96,12 @@
             </a></div>
         </li>
         <li class="has-mega">
-          <a href="resources/downloads.html" aria-current="page">Products &amp; Resources
+          <a href="resources/downloads.html">Products &amp; Resources
             <svg class="caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 4l4 4 4-4"/></svg>
           </a>
           <div class="mega mega--single">
-            <a class="mega__item" href="resources/selector.html"><span class="mega__num">◈</span><span class="mega__body"><strong>Product Selector</strong><span>Application × system × recommended grade</span></span></a>
+            <a class="mega__item" href="resources/selector.html"><span class="mega__num">◈</span><span class="mega__body"><strong>Product Selector</strong><span>Application × system × recommended grade</span></span></a><a class="mega__item" href="resources/specifications.html"><span class="mega__num">▧</span><span class="mega__body"><strong>Grade Specifications</strong><span>TDS: properties, compliance, packaging</span></span></a>
             <a class="mega__item" href="resources/downloads.html"><span class="mega__num">▤</span><span class="mega__body"><strong>Download Center</strong><span>SDS / TDS / COA / spec sheets</span></span></a>
-            <a class="mega__item" href="manufacturing.html"><span class="mega__num">⚙</span><span class="mega__body"><strong>Manufacturing Process</strong><span>Six-stage controlled production · batch QC</span></span></a>
             <a class="mega__item" href="resources/quality.html"><span class="mega__num">✓</span><span class="mega__body"><strong>Quality &amp; Delivery</strong><span>QC process · packaging · logistics</span></span></a>
             <a class="mega__item" href="resources/knowledge.html"><span class="mega__num">✎</span><span class="mega__body"><strong>Whitepapers &amp; FAQ</strong><span>Application articles and common questions</span></span></a>
           </div>
@@ -121,10 +128,11 @@
   </div>
 </header>
 
+
 <section class="proc-hero">
   <img src="assets/img/manufacturing/03-spray-drying.jpg" alt="Spray drying tower in the Vistasilica silica plant">
   <div class="wrap">
-    <nav class="crumbs" style="margin-bottom:1rem"><a href="index.html" style="color:#cdd8d5">Home</a><span style="color:#7d8f8b">/</span><span style="color:#cdd8d5">Products &amp; Resources</span><span style="color:#7d8f8b">/</span><span style="color:#fff">Manufacturing</span></nav>
+    <nav class="crumbs" style="margin-bottom:1rem"><a href='/' style='color:#cdd8d5'>Home</a><span style="color:#7d8f8b">/</span><span style="color:#cdd8d5">Products &amp; Resources</span><span style="color:#7d8f8b">/</span><span style="color:#fff">Manufacturing</span></nav>
     <span class="eyebrow" style="color:var(--sand)">Controlled process, consistent output</span>
     <h1>Six stages from precipitation to packaging</h1>
     <p>Every batch of Vistasilica precipitated silica follows the same controlled route — reaction, filtration, spray drying, milling, quality control and packaging — so the structure, particle size and purity you validate in a sample hold across repeat orders.</p>
@@ -239,10 +247,11 @@
     </div>
     <div class="expert-cta" style="margin-top:2.5rem">
       <div class="expert-cta__text"><strong>Want the full process pack or a plant capability brief?</strong><span>Ask us for TDS, COA templates, packaging specs and lead times for your grades and destination.</span></div>
-      <a class="btn btn--primary" href="contact.html">Talk to an expert</a>
+      <a class='btn btn--primary' href='/contact'>Talk to an expert</a>
     </div>
   </div>
-</section><footer class="site-footer">
+</section>
+<footer class="site-footer">
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-brand">
@@ -262,7 +271,6 @@
         <ul>
           <li><a href="resources/selector.html">Product Selector</a></li>
           <li><a href="resources/downloads.html">Download Center</a></li>
-          <li><a href="manufacturing.html">Manufacturing Process</a></li>
           <li><a href="resources/quality.html">Quality &amp; Delivery</a></li>
           <li><a href="resources/knowledge.html">Whitepapers &amp; FAQ</a></li>
           <li><a href="resources/sample.html">Request a Sample</a></li>
@@ -290,6 +298,7 @@
     </div>
   </div>
 </footer>
+
 <div class="floaters">
   <a class="floater floater--wa" href="https://wa.me/16195586563" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.1.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.6-1.5-.9-2c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 .9-1 2.3s1 2.7 1.2 2.9c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 00-8.5 15.3L2 22l4.8-1.5A10 10 0 1012 2z"/></svg>
@@ -298,7 +307,7 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
   </button>
 </div>
-<script src="js/main.js"></script>
-<script src="js/apple-motion.js"></script>
+<script src="js/main.js" defer></script>
+<script src="js/apple-motion.js" defer></script>
 </body>
 </html>

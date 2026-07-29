@@ -15,6 +15,14 @@
 <link rel="stylesheet" href="../css/style.css">
 <link rel="stylesheet" href="../css/apple-refine.css">
 
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1TE83L268C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1TE83L268C');
+</script>
 </head>
 <body><header class="site-header" id="top">
   <div class="topbar">
@@ -68,9 +76,9 @@
             <svg class="caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 4l4 4 4-4"/></svg>
           </a>
           <div class="mega mega--single">
-            <a class="mega__item" href="../resources/selector.html"><span class="mega__num">◈</span><span class="mega__body"><strong>Product Selector</strong><span>Application × system × recommended grade</span></span></a>
+            <a class="mega__item" href="../resources/selector.html"><span class="mega__num">◈</span><span class="mega__body"><strong>Product Selector</strong><span>Application × system × recommended grade</span></span></a><a class="mega__item" href="../resources/specifications.html"><span class="mega__num">▧</span><span class="mega__body"><strong>Grade Specifications</strong><span>TDS: properties, compliance, packaging</span></span></a>
             <a class="mega__item" href="../resources/downloads.html"><span class="mega__num">▤</span><span class="mega__body"><strong>Download Center</strong><span>SDS / TDS / COA / spec sheets</span></span></a>
-            <a class="mega__item" href="../manufacturing.html"><span class="mega__num">⚙</span><span class="mega__body"><strong>Manufacturing Process</strong><span>Six-stage controlled production · batch QC</span></span></a><a class="mega__item" href="../resources/quality.html"><span class="mega__num">✓</span><span class="mega__body"><strong>Quality &amp; Delivery</strong><span>QC process · packaging · logistics</span></span></a>
+            <a class="mega__item" href="../resources/quality.html"><span class="mega__num">✓</span><span class="mega__body"><strong>Quality &amp; Delivery</strong><span>QC process · packaging · logistics</span></span></a>
             <a class="mega__item" href="../resources/knowledge.html"><span class="mega__num">✎</span><span class="mega__body"><strong>Whitepapers &amp; FAQ</strong><span>Application articles and common questions</span></span></a>
           </div>
         </li>
@@ -169,15 +177,19 @@
         <div class="sidecard">
           <h3>Register to unlock</h3>
           <p style="font-size:.9rem;color:var(--ink-3)">Fill in a few details to unlock COA, test reports and the full spec library. We only use this to support your project, in line with our privacy policy.</p>
-          <form data-demo>
-            <div class="field" style="margin-bottom:.8rem"><label>Work email <span class="req">*</span></label><input type="email" required placeholder="you@company.com"></div>
-            <div class="field" style="margin-bottom:.8rem"><label>Company <span class="req">*</span></label><input type="text" required placeholder="Company"></div>
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="070878b7-643d-4cbe-aaab-2ebabbda39b0">
+            <input type="hidden" name="subject" value="New download registration from Vistasilica website">
+            <input type="hidden" name="from_name" value="Vistasilica Website">
+            <input type="hidden" name="redirect" value="https://vistasilica.netlify.app/thank-you.html">
+            <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+            <div class="field" style="margin-bottom:.8rem"><label>Work email <span class="req">*</span></label><input type="email" name="email" required placeholder="you@company.com"></div>
+            <div class="field" style="margin-bottom:.8rem"><label>Company <span class="req">*</span></label><input type="text" name="company" required placeholder="Company"></div>
             <div class="field" style="margin-bottom:1rem"><label>Track of interest</label>
-              <select><option>Feed additives</option><option>Food powders</option><option>Oral care</option><option>Agrochemical</option><option>Oil refining</option><option>Personal care</option></select>
+              <select name="track"><option>Feed additives</option><option>Food powders</option><option>Oral care</option><option>Agrochemical</option><option>Oil refining</option><option>Personal care</option></select>
             </div>
-            <label class="checkbox" style="margin-bottom:1rem"><input type="checkbox" required> I have read and agree to the <a href="../legal/privacy.html" style="color:var(--teal)">Privacy Policy</a> and data-processing terms (GDPR).</label>
+            <label class="checkbox" style="margin-bottom:1rem"><input type="checkbox" name="gdpr-consent" required> I have read and agree to the <a href="../legal/privacy.html" style="color:var(--teal)">Privacy Policy</a> and data-processing terms (GDPR).</label>
             <button class="btn btn--primary" style="width:100%;justify-content:center" type="submit">Register &amp; unlock</button>
-            <p class="form-result" hidden style="margin-top:1rem;color:var(--teal);font-size:.88rem">✓ Submitted. A download link will be sent to your email (demo site).</p>
           </form>
         </div>
       </aside>
@@ -203,7 +215,6 @@
         <ul>
           <li><a href="../resources/selector.html">Product Selector</a></li>
           <li><a href="../resources/downloads.html">Download Center</a></li>
-          <li><a href="../manufacturing.html">Manufacturing Process</a></li>
           <li><a href="../resources/quality.html">Quality &amp; Delivery</a></li>
           <li><a href="../resources/knowledge.html">Whitepapers &amp; FAQ</a></li>
           <li><a href="../resources/sample.html">Request a Sample</a></li>
@@ -239,7 +250,7 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
   </button>
 </div>
-<script src="../js/main.js"></script>
-<script src="../js/apple-motion.js"></script>
+<script src="../js/main.js" defer></script>
+<script src="../js/apple-motion.js" defer></script>
 </body>
 </html>
