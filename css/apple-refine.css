@@ -211,3 +211,38 @@ body { letter-spacing: 0; }
   line-height: 1.5;
   margin: 0;
 }
+
+/* ---------- Customer visit gallery ---------- */
+.visit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+.visit-card {
+  margin: 0;
+  background: #fff;
+  border: 1px solid var(--ink-4, #e5e9e7);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform .38s var(--ease-out-soft), box-shadow .38s var(--ease-out-soft);
+}
+.visit-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lift); }
+.visit-card img {
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  display: block;
+}
+.visit-card figcaption { padding: 1rem 1.15rem 1.2rem; }
+.visit-card figcaption strong {
+  display: block;
+  font-family: var(--font-display, inherit);
+  font-size: 1rem;
+  margin-bottom: .3rem;
+  letter-spacing: -0.01em;
+}
+.visit-card figcaption span {
+  font-size: .85rem;
+  color: var(--ink-3, #6b7674);
+  line-height: 1.5;
+}
