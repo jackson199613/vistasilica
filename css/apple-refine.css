@@ -167,3 +167,8 @@ body { letter-spacing: 0; }
   border-style: dashed;
 }
 .related-card--accent strong { color: var(--teal); }
+
+/* ---------- Case study cards ---------- */
+.case-card { border: 1px solid var(--ink-4, #e5e9e7); }
+.case-results li { margin-bottom: .25rem; line-height: 1.4; }
+.case-quote cite { font-weight: 500; }
