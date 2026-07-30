@@ -172,3 +172,42 @@ body { letter-spacing: 0; }
 .case-card { border: 1px solid var(--ink-4, #e5e9e7); }
 .case-results li { margin-bottom: .25rem; line-height: 1.4; }
 .case-quote cite { font-weight: 500; }
+
+/* ---------- Team member cards ---------- */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+.team-card {
+  background: #fff;
+  border: 1px solid var(--ink-4, #e5e9e7);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform .38s var(--ease-out-soft), box-shadow .38s var(--ease-out-soft);
+}
+.team-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lift); }
+.team-card__photo {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  display: block;
+}
+.team-card__body { padding: 1.15rem 1.25rem 1.4rem; }
+.team-card__name {
+  font-size: 1.1rem;
+  margin: 0 0 .2rem;
+  letter-spacing: -0.01em;
+}
+.team-card__role {
+  font-size: .85rem;
+  color: var(--teal);
+  font-weight: 500;
+  margin: 0 0 .6rem;
+}
+.team-card__bio {
+  font-size: .84rem;
+  color: var(--ink-3, #6b7674);
+  line-height: 1.5;
+  margin: 0;
+}
