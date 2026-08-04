@@ -258,6 +258,27 @@ li { margin-bottom: .4rem; }
 .card-cover { display: block; width: calc(100% + 3.2rem); max-width: none; height: auto; aspect-ratio: 16 / 9; object-fit: cover; margin: 0 -1.6rem 1.1rem; border-bottom: 1px solid var(--line); transition: transform .45s ease; }
 a.feature:hover .card-cover { transform: scale(1.04); }
 
+/* Technical article pages */
+.article-wrap { max-width: 760px; }
+.article-meta { display: flex; align-items: center; gap: .8rem; font-size: .85rem; color: var(--ink-3); margin-top: .8rem; }
+.article-hero { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: var(--radius-lg); border: 1px solid var(--line); margin-bottom: 2rem; }
+.article-wrap h2 { font-size: 1.35rem; margin: 2.4rem 0 .9rem; }
+.article-wrap h3 { font-size: 1.02rem; margin: 1.6rem 0 .4rem; }
+.article-wrap p { font-size: .96rem; line-height: 1.75; color: var(--ink-2); margin: 0 0 1rem; }
+.answer-block { background: var(--paper-2); border-left: 3px solid var(--teal); border-radius: 0 var(--radius-lg) var(--radius-lg) 0; padding: 1.2rem 1.4rem; margin-bottom: 1.5rem; }
+.answer-block strong { display: block; font-family: var(--font-display); font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; color: var(--teal); margin-bottom: .5rem; }
+.answer-block p { margin: 0; font-size: 1rem; }
+.framework { list-style: none; counter-reset: fw; padding: 0; margin: 0; }
+.framework > li { counter-increment: fw; position: relative; padding-left: 2.4rem; margin-bottom: 1.3rem; }
+.framework > li::before { content: counter(fw, decimal-leading-zero); position: absolute; left: 0; top: .1rem; font-family: var(--font-display); font-weight: 600; font-size: .9rem; color: var(--teal); }
+.framework > li h3 { margin: 0 0 .3rem; font-size: 1rem; }
+.framework > li p { margin: 0; }
+.case-box { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 1.4rem 1.6rem; }
+.case-box p:last-of-type { margin-bottom: .5rem; }
+.case-box ul { margin: 0; padding-left: 1.1rem; }
+.case-box li { font-size: .94rem; color: var(--ink-2); margin-bottom: .35rem; }
+.article-more { font-size: .88rem; color: var(--ink-3); margin-top: 1.6rem; }
+
 /* Pain points — numbered */
 .pain { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
 .pain__card { background: var(--paper-2); border-radius: var(--radius-lg); padding: 1.6rem; border-top: 3px solid var(--teal); }
