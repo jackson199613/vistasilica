@@ -437,6 +437,12 @@ table.data td:first-child { font-weight: 600; color: var(--ink); font-family: va
 .timeline__item h4 { margin: .2rem 0 .3rem; font-size: 1.05rem; }
 .timeline__item p { font-size: .9rem; color: var(--ink-3); margin: 0; }
 
+/* Timeline with photos (text left, image right) */
+.timeline--photo { max-width: 900px; }
+.timeline--photo .timeline__item { display: grid; grid-template-columns: minmax(0,1fr) 340px; gap: 2rem; align-items: start; padding-bottom: 2.25rem; }
+.timeline--photo .timeline__body { padding-top: .1rem; }
+.timeline__img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--radius-lg); border: 1px solid var(--line); display: block; }
+
 /* ============================================================
    RESPONSIVE
    ============================================================ */
@@ -468,6 +474,7 @@ table.data td:first-child { font-weight: 600; color: var(--ink); font-family: va
   .grid--3, .grid--2, .grid--4 { grid-template-columns: 1fr; }
   .pain { grid-template-columns: 1fr; }
   .method { grid-template-columns: 1fr; }
+  .timeline--photo .timeline__item { grid-template-columns: 1fr; gap: .9rem; }
   .method-figure { padding: 1.25rem; }
   .method-figure img { min-width: 660px; }
   .method-figure::-webkit-scrollbar { height: 4px; }
