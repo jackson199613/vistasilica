@@ -253,6 +253,11 @@ li { margin-bottom: .4rem; }
 .feature h3 { font-size: 1.08rem; margin-bottom: .5rem; }
 .feature p { font-size: .92rem; color: var(--ink-3); margin: 0; }
 
+/* Full-bleed cover image inside a .feature card */
+.feature--cover { padding-top: 0; overflow: hidden; }
+.card-cover { display: block; width: calc(100% + 3.2rem); max-width: none; height: auto; aspect-ratio: 16 / 9; object-fit: cover; margin: 0 -1.6rem 1.1rem; border-bottom: 1px solid var(--line); transition: transform .45s ease; }
+a.feature:hover .card-cover { transform: scale(1.04); }
+
 /* Pain points — numbered */
 .pain { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
 .pain__card { background: var(--paper-2); border-radius: var(--radius-lg); padding: 1.6rem; border-top: 3px solid var(--teal); }
