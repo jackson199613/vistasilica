@@ -138,15 +138,26 @@ li { margin-bottom: .4rem; }
 .brand__sub { display: block; font-family: var(--font-body); font-weight: 500; font-size: .62rem; letter-spacing: .22em; text-transform: uppercase; color: var(--ink-3); margin-top: 3px; }
 
 .nav__links { display: flex; align-items: center; gap: .35rem; list-style: none; margin: 0; padding: 0; }
-.nav__links > li { position: relative; }
+.nav__links > li { position: relative; flex: 0 0 auto; }
 .nav__links > li > a {
-  display: inline-flex; align-items: center; gap: .3rem;
+  display: inline-flex; align-items: center; gap: .3rem; white-space: nowrap;
   padding: .6rem .85rem; font-size: .93rem; font-weight: 500;
   color: var(--ink-2); border-radius: var(--radius);
   font-family: var(--font-display); transition: color .2s, background .2s;
 }
 .nav__links > li > a:hover, .nav__links > li.is-open > a { color: var(--teal); background: var(--teal-tint); }
 .nav__links > li > a[aria-current="page"] { color: var(--teal); }
+
+/* 窄屏：收紧导航间距与字号，避免文字折行或横向溢出 */
+@media (max-width: 1240px) {
+  .nav__links { gap: .1rem; }
+  .nav__links > li > a { padding: .6rem .6rem; font-size: .88rem; }
+}
+@media (max-width: 1120px) {
+  .nav__links > li > a { padding: .6rem .45rem; font-size: .84rem; letter-spacing: -0.01em; }
+  .nav__actions { gap: .4rem; }
+  .nav__actions .btn { padding-left: .85rem; padding-right: .85rem; font-size: .84rem; white-space: nowrap; }
+}
 .caret { width: 10px; height: 10px; opacity: .6; transition: transform .2s; }
 .nav__links > li.is-open .caret { transform: rotate(180deg); }
 
