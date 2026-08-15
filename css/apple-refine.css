@@ -377,3 +377,6 @@ body { letter-spacing: 0; }
 .scope-note p { font-size: .89rem; line-height: 1.7; color: var(--ink-2, #3d4b49); margin: 0 0 .7rem; }
 .scope-note--alt { background: #fff; border: 1px solid var(--line, #dfe4e1); border-left: 3px solid var(--sand, #c8a86a); margin: 2.5rem 0 0; }
 .scope-note--alt strong { color: var(--sand, #c8a86a); }
+
+/* Muted tag — for historical / archived case studies */
+.grade-tag--muted { background: var(--line-2, #eef1ee) !important; color: var(--ink-3, #6b7674) !important; }
