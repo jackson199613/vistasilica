@@ -25,6 +25,40 @@
   gtag('js', new Date());
   gtag('config', 'G-1TE83L268C');
 </script>
+<style>
+/* ===== Contact form — Vistamatt 定版格式，仅作用于本页 ===== */
+.contact-form .field label{
+  font-family:"IBM Plex Mono","SF Mono",Menlo,monospace;
+  font-size:.8125rem;text-transform:uppercase;letter-spacing:.08em;
+  font-weight:400;color:var(--ink-3,#6b7674);
+}
+.contact-form .field label .req{color:var(--teal);}
+
+/* GDPR 勾选：防止 checkbox 被撑满整行 */
+.contact-form .consent{
+  display:flex;gap:12px;align-items:flex-start;
+  font-size:.8125rem;color:var(--ink-3,#6b7674);margin:1.25rem 0 0;
+}
+.contact-form .consent input[type="checkbox"]{
+  width:16px;height:16px;padding:0;flex:none;margin-top:3px;
+}
+.contact-form .consent label{
+  flex:1 1 auto;min-width:0;margin:0;
+  font-family:inherit;font-size:.8125rem;text-transform:none;letter-spacing:0;
+}
+
+/* 提交按钮居中 */
+.contact-form .btn-row{
+  display:flex;flex-wrap:wrap;gap:14px;margin-top:28px;justify-content:center;
+}
+.contact-form .form-note{
+  font-size:.8125rem;color:var(--ink-3,#6b7674);margin-top:16px;
+}
+
+/* 悬浮按钮避让 Tawk.to：实测 Tawk 最高固定元素距底 125px，取 +20px */
+.floaters{ bottom:145px; }
+@media (max-width:600px){ .floaters{ bottom:140px; } }
+</style>
 </head>
 <body><header class="site-header" id="top">
   <div class="topbar">
@@ -118,25 +152,45 @@
       <div>
         <span class="eyebrow">Inquiry form</span>
         <h2 class="section-title" style="margin-bottom:1.5rem">Tell us about your project</h2>
-        <form action="https://api.web3forms.com/submit" method="POST">
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
           <input type="hidden" name="access_key" value="070878b7-643d-4cbe-aaab-2ebabbda39b0">
           <input type="hidden" name="subject" value="New inquiry from Vistasilica website">
           <input type="hidden" name="from_name" value="Vistasilica Website">
           <input type="hidden" name="redirect" value="https://vistasilica.netlify.app/thank-you.html">
           <input type="checkbox" name="botcheck" class="hidden" style="display:none">
           <div class="form-grid">
-            <div class="field"><label>Name <span class="req">*</span></label><input type="text" name="name" required></div>
-            <div class="field"><label>Work email <span class="req">*</span></label><input type="email" name="email" required></div>
-            <div class="field"><label>Company <span class="req">*</span></label><input type="text" name="company" required></div>
-            <div class="field"><label>Country / region <span class="req">*</span></label><input type="text" name="country" required></div>
-            <div class="field"><label>WhatsApp / phone</label><input type="tel" name="phone" placeholder="+.."></div>
-            <div class="field"><label>Target track</label>
-              <select name="track"><option>Feed additives</option><option>Food powders</option><option>Oral care</option><option>Agrochemical</option><option>Oil refining</option><option>Industrial fluoride removal</option><option>Other / not sure</option></select>
+            <div class="field"><label for="cf-name">Name <span class="req">*</span></label><input type="text" id="cf-name" name="name" required autocomplete="name"></div>
+            <div class="field"><label for="cf-company">Company <span class="req">*</span></label><input type="text" id="cf-company" name="company" required autocomplete="organization"></div>
+            <div class="field"><label for="cf-email">Work email <span class="req">*</span></label><input type="email" id="cf-email" name="email" required autocomplete="email"></div>
+            <div class="field"><label for="cf-country">Country / region <span class="req">*</span></label><input type="text" id="cf-country" name="country" required autocomplete="country-name"></div>
+            <div class="field"><label for="cf-phone">WhatsApp / phone</label><input type="tel" id="cf-phone" name="phone" placeholder="+.." autocomplete="tel"></div>
+            <div class="field"><label for="cf-track">Target track</label>
+              <select id="cf-track" name="track">
+                <option value="">Select</option>
+                <option>Feed additives</option>
+                <option>Food powders</option>
+                <option>Oral care</option>
+                <option>Agrochemical</option>
+                <option>Oil refining</option>
+                <option>Industrial fluoride removal</option>
+                <option>Other / not sure</option>
+              </select>
             </div>
-            <div class="field field--full"><label>Your requirement <span class="req">*</span></label><textarea name="requirement" required placeholder="Process system, target metrics, current pain points, destination port / MOQ…"></textarea></div>
+            <div class="field field--full"><label for="cf-req">Your requirement <span class="req">*</span></label><textarea id="cf-req" name="requirement" rows="5" required placeholder="Process system, target metrics, current pain points, destination port / MOQ…"></textarea></div>
+
+            <div class="field field--full">
+              <div class="consent">
+                <input type="checkbox" id="cf-consent" name="gdpr-consent" required>
+                <label for="cf-consent">I agree that <strong>Vistasilica</strong> may store and process the information above in order to respond to this enquiry, as described in the <a href="legal/privacy.html" style="color:var(--teal)">privacy policy</a>. <span class="req">*</span></label>
+              </div>
+            </div>
           </div>
-          <label class="checkbox" style="margin:1rem 0"><input type="checkbox" name="gdpr-consent" required> I agree that Vistasilica may process the information I submit under the <a href="legal/privacy.html" style="color:var(--teal)">Privacy Policy</a> to respond to this inquiry (GDPR).</label>
-          <button class="btn btn--primary" type="submit">Submit inquiry</button>
+
+          <div class="btn-row">
+            <button class="btn btn--primary" type="submit">Send enquiry</button>
+          </div>
+
+          <p class="form-note">Fields marked <span class="req" style="color:var(--teal)">*</span> are required. We use these details only to respond to your enquiry and do not share them with third parties.</p>
         </form>
       </div>
       <aside>
